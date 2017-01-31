@@ -1,0 +1,389 @@
+/*********************
+
+font-face
+
+**********************/
+
+@font-face {
+  font-family: 'mainleve';
+  src: url('../fonts/mainleve.woff2') format('woff2'), url('../fonts/mainleve.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'vaivai';
+  src: url('../fonts/vaivai.woff2') format('woff2'), url('../fonts/vaivai.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/***********************
+
+Header
+
+***********************/
+
+#header #menuLogo {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#header #menuLogo img {
+  height: 60px;
+  margin: 2px 0;
+}
+
+#header li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-family: 'mainleve', 'Arial', sans-serif;
+  font-size: 30px;
+}
+
+#header li a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 20px;
+  transition: color 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#header li:hover a {
+  color: #ed237a;
+  transform: scale(1.5);
+}
+
+@media screen and (max-width: 639px) {
+  #header #menuLogo {
+    display: none;
+  }
+  #header li {
+    display: block;
+  }
+}
+
+#header .title-bar {
+  background: #fff;
+  color: #000;
+}
+
+#header .title-bar .menu-icon:after {
+  background: #ed237a;
+  box-shadow: 0 7px 0 #ed237a, 0 14px 0 #ed237a;
+}
+
+#header .title-bar #titleBarLogo {
+  text-align: center;
+  display: inline-block;
+}
+
+#header .title-bar #titleBarLogo img {
+  height: 35px;
+  display: inline-block;
+}
+
+
+/***********************
+
+cocoSlider
+
+************************/
+
+#feature {
+  padding: 20px 0;
+  background-image: url(../images/bois.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+#feature .cocoSlider {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+#feature .cocoSlider .slick-next {
+  right: 25px;
+  z-index: 10;
+}
+
+#feature .cocoSlider .slick-prev {
+  left: 25px;
+  z-index: 11;
+}
+
+#feature .cocoSlider .slick-dots {
+  bottom: 25px;
+}
+
+#feature .cocoSlider.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #ed237a;
+  opacity: 1;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  color: #ed237a;
+  opacity: 1;
+}
+
+.slick-prev:focus:before,
+.slick-next:focus:before {
+  opacity: 0.50;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  opacity: 1;
+  color: #ed237a;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  opacity: 0.50;
+  color: #000;
+  transition: all 0.3s;
+}
+
+#feature .cocoSlider-item {
+  position: relative;
+}
+
+#feature .cocoSlider img {
+  width: 800px;
+  height: 500px;
+  display: inline-block;
+}
+
+#feature .cocoSlider .infos+img {
+  float: right;
+}
+
+#feature .cocoSlider .infos {
+  width: 400px;
+  display: inline-block;
+  text-align: center;
+  padding-left: 25px;
+  float: left;
+  margin-top: 100px;
+}
+
+#feature .cocoSlider img+.infos {
+  float: right;
+  padding-right: 25px;
+}
+
+#feature .cocoSlider .infos h3 {
+  font-size: 120px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#feature .cocoSlider .infos p {
+  font-size: 22px;
+  font-family: 'Dosis', 'Arial', sans-serif;
+}
+
+#feature .cocoSlider .infos a {
+  background-color: #ed237a;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 2px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  margin-top: 20px;
+}
+
+#feature .cocoSlider .infos a:hover {
+  background-color: #fff;
+  color: #ed237a;
+}
+
+@media screen and (max-width: 1199px) {
+  #feature .cocoSlider {
+    width: 100%;
+    margin: 0;
+  }
+  #feature {
+    padding: 0;
+  }
+  #feature .cocoSlider img {
+    width: 100%;
+    height: auto;
+    display: block;
+    float: none;
+    order: 1;
+  }
+  #feature .cocoSlider-item {
+    display: flex;
+    flex-flow: column;
+  }
+  #feature .cocoSlider .infos {
+    order: 2;
+    width: 100%;
+    display: block;
+    padding: 0 20px !important;
+    float: none;
+    margin-top: 0px;
+  }
+  #feature .cocoSlider .infos h3 {
+    font-size: 120px;
+    font-family: 'vaivai', 'Arial', sans-serif;
+    text-align: center;
+    padding: 10px 0;
+  }
+  #feature .cocoSlider .infos p {
+    margin: 0px;
+  }
+  #feature .cocoSlider .infos a {
+    margin-top: 5px;
+  }
+  #feature .cocoSlider .infos a:hover {
+    background-color: #fff;
+    color: #ed237a;
+  }
+  #feature .cocoSlider .slick-dots {
+    bottom: 10px;
+  }
+  #feature .cocoSlider {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  #feature .cocoSlider {
+    padding-bottom: 20px;
+  }
+}
+
+/*************************
+
+Avatar
+
+*************************/
+
+#avatar {
+  padding: 20px 0;
+  background-image: url(../images/bois.jpg);
+  background-size: auto;
+  background-repeat: repeat;
+}
+
+#avatar .infos {
+  margin-bottom: 20px;
+}
+
+#avatar .infos h1 {
+  font-size: 120px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#avatar .infos p {
+  font-size: 22px;
+  font-family: 'Dosis', 'Arial', sans-serif;
+}
+
+#avatar .app .form input[type=radio]+label {
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}
+
+#avatar .app .form input[type=radio]+label img {
+  width: 100px;
+}
+
+#avatar .app .form input[type=radio] {
+  display: none;
+}
+
+#avatar .app .form input[type=radio]:checked + label {
+  background: rgba(0,0,0,0.5);
+}
+
+#avatar .app .canvas canvas {
+  background: #000;
+  width: 100%;
+}
+
+/*************************
+
+Separator
+
+*************************/
+
+.separator {
+  height: 20px;
+  background-image: url(../images/seperator.png);
+  background-repeat: repeat-x;
+}
+
+
+/*************************
+  
+ClearBoth
+  
+*************************/
+
+div.clear {
+  clear: both;
+}
+
+
+/************************
+
+Footer
+
+************************/
+
+#footer {
+  font-family: 'Dosis', Arial, sans-serif;
+}
+
+#footer #socialLinks li a {
+  color: #000;
+  transition: color 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  font-size: 40px;
+}
+
+#footer #socialLinks li a:hover {
+  color: #ed237a;
+  transform: scale(1.5);
+}
+
+#footer #corporationLinks li a {
+  color: #000;
+  transition: color 0.5s;
+  font-size: 16px;
+}
+
+#footer #corporationLinks li a:hover {
+  color: #ed237a;
+}
+
+@media screen and (max-width: 639px) {
+  #footer #corporationLinks li a {
+    padding: 5px;
+  }
+  #footer #socialLinks li a {
+    font-size: 25px;
+    padding: 5px;
+  }
+}

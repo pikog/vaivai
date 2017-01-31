@@ -7,24 +7,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CocoTour</title>
   <link rel="stylesheet" href="styles/foundation.min.css" />
+  <link rel="stylesheet" href="styles/slick.css" />
+  <link rel="stylesheet" href="styles/slick-theme.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
+  <link rel="stylesheet" href="styles/font-awesome.min.css">
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
 <body>
   <header id="header">
-    <div class="container">
-      <div id="logo">
-        <a href="index.html" title="Vaivai">
-          <img src="https://www.vaivai.fr/resources/t/firstPixel/assets/images/logo.png" alt="logo" title="Vaivai"></a>
+    <div class="title-bar" data-responsive-toggle="menuHeader" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="menuHeader"></button>
+      <div id="titleBarLogo">
+        <img src="images/logo.png" alt="Vaivai" title="Vaivai">
       </div>
     </div>
+
+    <div class="menu-centered" id="menuHeader">
+      <div id="menuLogo">
+        <img src="images/logo.png" alt="Vaivai" title="Vaivai">
+      </div>
+      <ul class="menu">
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Partagez !</a></li>
+        <li><a href="#">Nos produits</a></li>
+      </ul>
+    </div>
+
   </header>
 
-  <script src="scripts/vendor/jquery.min.js"></script>
-  <script src="scripts/vendor/what-input.min.js"></script>
+  <main>
+
+    <section id="feature">
+      <div class="cocoSlider">
+        <div class="cocoSlider-item">
+          <img src="images/slide-1.png" alt="Van" title="Van">
+          <div class="infos">
+            <h3>Coco Van</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
+            <a href="#">C'est parti !</a>
+          </div>
+        </div>
+        <div class="cocoSlider-item">
+          <div class="infos">
+            <h3>Coco Van</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
+            <a href="#">C'est parti !</a>
+          </div>
+          <img src="images/slide-1.png" alt="Van" title="Van">
+        </div>
+      </div>
+      <div class="clear"></div>
+    </section>
+
+    <div class="separator"></div>
+
+  </main>
+
+  <footer id="footer">
+    <div class="separator"></div>
+    <div class="menu-centered" id="socialLinks">
+      <ul class="menu">
+        <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://fr.pinterest.com/vaivai/" title="Pinterest" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/vaivaiconnexion/" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/user/Vaivaiconnexion" title="Youtube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/va-va-/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+      </ul>
+    </div>
+    <div class="menu-centered" id="corporationLinks">
+      <ul class="vertical medium-horizontal menu">
+        <li><a href="https://www.vaivai.fr">© 2017 Vaivai SAS</a></li>
+        <li><a href="https://www.vaivai.fr/fr/conditions-utilisation/">Conditions d’utilisation</a></li>
+        <li><a href="https://www.vaivai.fr/fr/mentions-legales/">Mentions légales</a></li>
+        <li><a href="https://www.vaivai.fr/fr/vie-privee/">Vie privée</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="scripts/vendor/jquery.js"></script>
+  <script src="scripts/vendor/what-input.js"></script>
   <script src="scripts/vendor/foundation.min.js"></script>
+  <script src="scripts/vendor/slick.min.js"></script>
+  <script src="scripts/main.js"></script>
   <script>
     $(document).foundation();
+    $(document).ready(function() {
+      $('.cocoSlider').slick({
+        dots: true,
+        infinite: true,
+        speed: 800,
+        slidesToShow: 1,
+        fade: true,
+        responsive: [{
+          breakpoint: 639,
+          settings: {
+            dots: false,
+            fade: false
+          },
+        }, {
+          breakpoint: 1199,
+          settings: {
+            fade: false
+          },
+        }]
+      });
+    });
 
   </script>
 
