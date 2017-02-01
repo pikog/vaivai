@@ -6,6 +6,7 @@ Body
 
 body {
   font-family: 'Dosis', 'Arial', sans-serif;
+  font-size: 22px;
 }
 
 
@@ -171,6 +172,10 @@ cocoSlider
   display: inline-block;
 }
 
+#feature .cocoSlider#produit img {
+  width: 670px;
+}
+
 #feature .cocoSlider .infos+img {
   float: right;
 }
@@ -181,7 +186,11 @@ cocoSlider
   text-align: center;
   padding-left: 25px;
   float: left;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+#feature .cocoSlider#produit .infos {
+  width: 530px;
 }
 
 #feature .cocoSlider img+.infos {
@@ -192,7 +201,7 @@ cocoSlider
 #feature .cocoSlider .infos h3 {
   font-size: 120px;
   font-family: 'vaivai', 'Arial', sans-serif;
-  line-height: 0.4;
+  line-height: 0.5;
   text-align: center;
   margin: 0;
   padding: 30px 0;
@@ -230,7 +239,7 @@ cocoSlider
   #feature {
     padding: 0;
   }
-  #feature .cocoSlider img {
+  #feature .cocoSlider img, #feature .cocoSlider#produit img {
     width: 100%;
     height: auto;
     display: block;
@@ -241,18 +250,15 @@ cocoSlider
     display: flex;
     flex-flow: column;
   }
-  #feature .cocoSlider .infos {
+  #feature .cocoSlider .infos, #feature .cocoSlider img+.infos, #feature .cocoSlider#produit .infos {
     order: 2;
     width: 100%;
     display: block;
-    padding: 0 20px !important;
+    padding: 0 20px;
     float: none;
     margin-top: 0px;
   }
   #feature .cocoSlider .infos h3 {
-    font-size: 120px;
-    font-family: 'vaivai', 'Arial', sans-serif;
-    text-align: center;
     padding: 10px 0;
   }
   #feature .cocoSlider .infos p {
@@ -276,6 +282,9 @@ cocoSlider
 @media screen and (max-width: 639px) {
   #feature .cocoSlider {
     padding-bottom: 20px;
+  }
+  #feature .cocoSlider .infos h3 {
+    font-size: 100px;
   }
 }
 
@@ -368,7 +377,6 @@ Avatar
 
 #avatar .app .canvas canvas {
   width: 100%;
-  /*max-width: 500px;*/
   border: solid #000;
 }
 
@@ -422,7 +430,7 @@ Tour
 *************************/
 
 #tour .infos {
-  margin: 10px inherit;
+  margin: 10px auto;
 }
 
 #tour .infos h1,
@@ -563,8 +571,8 @@ Produits
   margin: 10px auto;
 }
 
-#produits .infos .imgProduit{
-  text-align: center;
+#produits .infos img {
+  width: 100%;
 }
 
 #produits .infos h1 {
@@ -578,6 +586,29 @@ Produits
 
 #produits .infos p {
   font-size: 22px;
+}
+
+#produits .moreProducts {
+  text-align: center;
+}
+
+#produits .moreProducts a {
+  background-color: #ed237a;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 2px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+#produits .moreProducts a:hover {
+  transform: scale(1.1);
 }
 
 
