@@ -5,10 +5,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CocoTour</title>
+  <title>CocoNut Tour - Partagez !</title>
   <link rel="stylesheet" href="../styles/foundation.min.css" />
-  <link rel="stylesheet" href="../styles/slick.css" />
-  <link rel="stylesheet" href="../styles/slick-theme.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
   <link rel="stylesheet" href="../styles/font-awesome.min.css">
   <link rel="stylesheet" href="../styles/style.css" />
@@ -16,21 +14,22 @@
 
 <body>
   <header id="header">
+
     <div class="title-bar" data-responsive-toggle="menuHeader" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="menuHeader"></button>
       <div id="titleBarLogo">
-        <img src="../images/logo.png" alt="Vaivai" title="Vaivai">
+        <a href="../index.html" title="Accueil"><img src="../images/logo.png" alt="Vaivai" title="Vaivai"></a>
       </div>
     </div>
 
     <div class="menu-centered" id="menuHeader">
       <div id="menuLogo">
-        <img src="../images/logo.png" alt="Vaivai" title="Vaivai">
+        <a href="../index.html" title="Accueil"><img src="../images/logo.png" alt="Vaivai" title="Vaivai"></a>
       </div>
       <ul class="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Partagez !</a></li>
-        <li><a href="#">Nos produits</a></li>
+        <li><a href="../index.html" title="Accueil">Accueil</a></li>
+        <li><a href="partage.html" title="Partagez">Partagez !</a></li>
+        <li><a href="produits.html" title="Nos produits">Nos produits</a></li>
       </ul>
     </div>
 
@@ -39,62 +38,104 @@
   <main>
 
     <section id="avatar">
+
       <div class="row infos">
+
         <div class="small-12 columns">
           <h1>Créer ton avatar !</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quod ratione ut suscipit. Vero sit labore quia eaque est in, similique quam explicabo, dignissimos provident, deserunt quo voluptatibus recusandae ipsum.</p>
         </div>
+
       </div>
+
       <div class="row app">
+
         <div class="small-12 medium-6 columns form">
-          <form action="">
+          <form action="#" method="post">
+
             <fieldset>
-              <input type="radio" name="avatar" value="Red" id="avatar1" required>
-              <label for="avatar1"><img src="../images/avatar1.png" alt="Avatar 1"></label>
-              <input type="radio" name="avatar" value="Red" id="avatar2">
-              <label for="avatar2"><img src="../images/avatar1.png" alt="Avatar 2"></label>
+              <input type="radio" name="avatar" value="1" id="avatar1" checked>
+              <label for="avatar1"><img src="../images/avatar/1.png" alt="Avatar 1" title="Avatar 1" id="imgAvatar1"></label>
+              <input type="radio" name="avatar" value="2" id="avatar2">
+              <label for="avatar2"><img src="../images/avatar/2.png" alt="Avatar 2" title="Avatar 2" id="imgAvatar2"></label>
+              <input type="radio" name="avatar" value="3" id="avatar3">
+              <label for="avatar3"><img src="../images/avatar/3.png" alt="Avatar 3" title="Avatar 3" id="imgAvatar3"></label>
+              <input type="radio" name="avatar" value="4" id="avatar4">
+              <label for="avatar4"><img src="../images/avatar/4.png" alt="Avatar 4" title="Avatar 4" id="imgAvatar4"></label>
+              <input type="radio" name="avatar" value="5" id="avatar5">
+              <label for="avatar5"><img src="../images/avatar/5.png" alt="Avatar 5" title="Avatar 5" id="imgAvatar5"></label>
+              <input type="radio" name="avatar" value="6" id="avatar6">
+              <label for="avatar6"><img src="../images/avatar/6.png" alt="Avatar 6" title="Avatar 6" id="imgAvatar6"></label>
             </fieldset>
+
+            <label for="text">Votre message :</label>
+            <input type="text" name="text" value="" id="text" maxlength="200">
+
+            <div id="buttonCenter">
+              <button id="update">Mettre à jour l'image</button>
+            </div>
+
           </form>
         </div>
+
         <div class="small-12 medium-6 columns canvas">
-          <canvas></canvas>
+          <img src="../images/bulle.png" alt="Bulle" title="Bulle" id="bulle">
+          <img src="../images/fond_canvas.png" alt="Fond canvas" title="Fond canvas" id="fondCanvas">
+
+          <canvas id="canvasAvatar" width="500" height="300">
+            Pas de support du canvas
+          </canvas>
         </div>
+
+        <div class="small-12 columns share">
+          <h3>Partagez votre passion coco !</h3>
+          <a href="#" title="Votre image" id="linkImgCanvas">Votre image<i class="fa fa-download" aria-hidden="true"></i></a>
+          <a href="#" title="Partager sur Twitter" id="linkImgCanvas">Partager sur Twitter<i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" title="Partager sur Facebook" id="linkImgCanvas">Partager sur Facebook<i class="fa fa-facebook" aria-hidden="true"></i></a>
+        </div>
+
       </div>
+
     </section>
 
   </main>
 
   <footer id="footer">
+
     <div class="separator"></div>
+
     <div class="menu-centered" id="socialLinks">
+
       <ul class="menu">
-        <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://fr.pinterest.com/vaivai/" title="Pinterest" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/vaivaiconnexion/" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.youtube.com/user/Vaivaiconnexion" title="Youtube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/company/va-va-/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://fr.pinterest.com/vaivai/" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/vaivaiconnexion/" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/user/Vaivaiconnexion" title="Youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/va-va-/" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
       </ul>
+
     </div>
+
     <div class="menu-centered" id="corporationLinks">
+
       <ul class="vertical medium-horizontal menu">
-        <li><a href="https://www.vaivai.fr">© 2017 Vaivai SAS</a></li>
-        <li><a href="https://www.vaivai.fr/fr/conditions-utilisation/">Conditions d’utilisation</a></li>
-        <li><a href="https://www.vaivai.fr/fr/mentions-legales/">Mentions légales</a></li>
-        <li><a href="https://www.vaivai.fr/fr/vie-privee/">Vie privée</a></li>
+        <li><a href="https://www.vaivai.fr" title="Vaivai.fr">Vaivai.fr</a></li>
+        <li><a href="https://www.vaivai.fr" title="Vaivai SAS">© 2017 Vaivai SAS</a></li>
+        <li><a href="https://www.vaivai.fr/fr/conditions-utilisation/" title="Conditions d’utilisation">Conditions d’utilisation</a></li>
+        <li><a href="https://www.vaivai.fr/fr/mentions-legales/" title="Mentions légales">Mentions légales</a></li>
+        <li><a href="https://www.vaivai.fr/fr/vie-privee/" title="Vie privée">Vie privée</a></li>
       </ul>
+
     </div>
+
   </footer>
 
   <script src="../scripts/vendor/jquery.js"></script>
   <script src="../scripts/vendor/what-input.js"></script>
   <script src="../scripts/vendor/foundation.min.js"></script>
-  <script src="../scripts/vendor/slick.min.js"></script>
   <script src="../scripts/main.js"></script>
-  <script>
-    $(document).foundation();
-
-  </script>
+  <script src="../scripts/avatar.js"></script>
 
 </body>
 

@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CocoTour</title>
+  <title>CocoNut Tour - Accueil</title>
   <link rel="stylesheet" href="styles/foundation.min.css" />
   <link rel="stylesheet" href="styles/slick.css" />
   <link rel="stylesheet" href="styles/slick-theme.css" />
@@ -15,22 +15,24 @@
 </head>
 
 <body>
+
   <header id="header">
+
     <div class="title-bar" data-responsive-toggle="menuHeader" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="menuHeader"></button>
       <div id="titleBarLogo">
-        <img src="images/logo.png" alt="Vaivai" title="Vaivai">
+        <a href="index.html" title="Accueil"><img src="images/logo.png" alt="Vaivai" title="Vaivai"></a>
       </div>
     </div>
 
     <div class="menu-centered" id="menuHeader">
       <div id="menuLogo">
-        <img src="images/logo.png" alt="Vaivai" title="Vaivai">
+        <a href="index.html" title="Accueil"><img src="images/logo.png" alt="Vaivai" title="Vaivai"></a>
       </div>
       <ul class="menu">
-        <li><a href="#">Accueil</a></li>
-        <li><a href="#">Partagez !</a></li>
-        <li><a href="#">Nos produits</a></li>
+        <li><a href="index.html" title="Accueil">Accueil</a></li>
+        <li><a href="pages/partage.html" title="Partagez">Partagez !</a></li>
+        <li><a href="pages/produits.html" title="Nos produits">Nos produits</a></li>
       </ul>
     </div>
 
@@ -39,51 +41,138 @@
   <main>
 
     <section id="feature">
+
       <div class="cocoSlider">
+
         <div class="cocoSlider-item">
+
           <img src="images/slide-1.png" alt="Van" title="Van">
+
+          <div class="infos">
+            <h3>CocoNut Tour !</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
+            <a href="#" title="Voir le Tour">C'est parti !</a>
+          </div>
+
+        </div>
+
+        <div class="cocoSlider-item">
+
           <div class="infos">
             <h3>Coco Van</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
-            <a href="#">C'est parti !</a>
+            <a href="#" title="Voir le Tour">C'est parti !</a>
           </div>
-        </div>
-        <div class="cocoSlider-item">
-          <div class="infos">
-            <h3>Coco Van</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
-            <a href="#">C'est parti !</a>
-          </div>
+
           <img src="images/slide-1.png" alt="Van" title="Van">
+
         </div>
+
       </div>
+
       <div class="clear"></div>
+
     </section>
 
     <div class="separator"></div>
 
+    <section id="tour">
+     
+      <div class="row infos">
+       
+        <div class="small-12 medium-6 large-8 columns">
+          <h1>Le Concept</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quod ratione ut suscipit. Vero sit labore quia eaque est in, similique quam explicabo, dignissimos provident, deserunt quo voluptatibus recusandae ipsum.</p>
+        </div>
+        
+        <div class="small-12 medium-6 large-4 columns">
+          <img src="images/van.jpg" alt="Van" title="Van" />
+        </div>
+        
+      </div>
+      
+      <div class="row dates">
+       
+        <h3>Nos dates</h3>
+        
+        <div class="small-12 medium-4 columns">
+          <a href="#" target="_blank" class="nextDate">
+            <h4>17 Mai</h4>
+            <p>Adidas Runners</p>
+            <p>Pigale</p>
+          </a>
+        </div>
+        
+        <div class="small-12 medium-4 columns">
+          <a href="#" target="_blank" class="nextDate">
+            <h4>22 Mai</h4>
+            <p>Gym Suédoise</p>
+            <p>Parc monceau</p>
+          </a>
+        </div>
+        
+        <div class="small-12 medium-4 columns">
+          <a href="#" target="_blank" class="nextDate">
+            <h4>23 Mai</h4>
+            <p>Gym Suédoise</p>
+            <p>Jardin du luxembourg</p>
+          </a>
+        </div>
+
+        <button id="more">En voir +</button>
+
+        <div class="small-12 columns" id="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Lieu</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>24 mai</td>
+                <td><a href="#" title="Adidas Runners - Pigale" target="_blank">Adidas Runners - Pigale</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        
+      </div>
+      
+    </section>
+
   </main>
 
   <footer id="footer">
+
     <div class="separator"></div>
+
     <div class="menu-centered" id="socialLinks">
+
       <ul class="menu">
-        <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-        <li><a href="https://fr.pinterest.com/vaivai/" title="Pinterest" target="_blank"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.instagram.com/vaivaiconnexion/" title="Instagram" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.youtube.com/user/Vaivaiconnexion" title="Youtube" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
-        <li><a href="https://www.linkedin.com/company/va-va-/" title="LinkedIn" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://fr.pinterest.com/vaivai/" title="Pinterest"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.instagram.com/vaivaiconnexion/" title="Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.youtube.com/user/Vaivaiconnexion" title="Youtube"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+        <li><a href="https://www.linkedin.com/company/va-va-/" title="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
       </ul>
+
     </div>
+
     <div class="menu-centered" id="corporationLinks">
+
       <ul class="vertical medium-horizontal menu">
-        <li><a href="https://www.vaivai.fr">© 2017 Vaivai SAS</a></li>
-        <li><a href="https://www.vaivai.fr/fr/conditions-utilisation/">Conditions d’utilisation</a></li>
-        <li><a href="https://www.vaivai.fr/fr/mentions-legales/">Mentions légales</a></li>
-        <li><a href="https://www.vaivai.fr/fr/vie-privee/">Vie privée</a></li>
+        <li><a href="https://www.vaivai.fr" title="Vaivai.fr">Vaivai.fr</a></li>
+        <li><a href="https://www.vaivai.fr" title="Vaivai SAS">© 2017 Vaivai SAS</a></li>
+        <li><a href="https://www.vaivai.fr/fr/conditions-utilisation/" title="Conditions d’utilisation">Conditions d’utilisation</a></li>
+        <li><a href="https://www.vaivai.fr/fr/mentions-legales/" title="Mentions légales">Mentions légales</a></li>
+        <li><a href="https://www.vaivai.fr/fr/vie-privee/" title="Vie privée">Vie privée</a></li>
       </ul>
+
     </div>
+
   </footer>
 
   <script src="scripts/vendor/jquery.js"></script>
@@ -92,7 +181,6 @@
   <script src="scripts/vendor/slick.min.js"></script>
   <script src="scripts/main.js"></script>
   <script>
-    $(document).foundation();
     $(document).ready(function() {
       $('.cocoSlider').slick({
         dots: true,
@@ -113,6 +201,16 @@
           },
         }]
       });
+
+      $("button#more").click(function() {
+        $("#table").toggle();
+        if ($("#table").is(":visible")) {
+          $(this).text("En voir -");
+        } else {
+          $(this).text("En voir +");
+        }
+      });
+
     });
 
   </script>

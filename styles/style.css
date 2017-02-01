@@ -1,3 +1,14 @@
+/********************
+
+Body
+
+********************/
+
+body {
+  font-family: 'Dosis', 'Arial', sans-serif;
+}
+
+
 /*********************
 
 font-face
@@ -202,7 +213,6 @@ cocoSlider
   display: inline-block;
   border-radius: 5px;
   text-transform: uppercase;
-  -webkit-transition: 0.3s linear all;
   transition: 0.3s linear all;
   margin-top: 20px;
 }
@@ -269,6 +279,7 @@ cocoSlider
   }
 }
 
+
 /*************************
 
 Avatar
@@ -297,7 +308,10 @@ Avatar
 
 #avatar .infos p {
   font-size: 22px;
-  font-family: 'Dosis', 'Arial', sans-serif;
+}
+
+#avatar .app .form fieldset {
+  text-align: center;
 }
 
 #avatar .app .form input[type=radio]+label {
@@ -314,14 +328,258 @@ Avatar
   display: none;
 }
 
-#avatar .app .form input[type=radio]:checked + label {
-  background: rgba(0,0,0,0.5);
+#avatar .app .form input[type=radio]:checked+label {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+#avatar .app .form input[type=text] {
+  background: #fff;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+
+#avatar .app .form label[for=text] {
+  font-size: 22px;
+}
+
+#avatar .app .form #buttonCenter {
+  text-align: center;
+}
+
+#avatar .app .form #update {
+  background-color: #ed237a;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 7px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s linear all;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+#avatar .app .form #update:hover {
+  background-color: #fff;
+  color: #ed237a;
 }
 
 #avatar .app .canvas canvas {
-  background: #000;
   width: 100%;
+  /*max-width: 500px;*/
+  border: solid #000;
 }
+
+#avatar .app .canvas img#bulle,
+#avatar .app .canvas img#fondCanvas {
+  display: none;
+}
+
+#avatar .app .share {
+  text-align: center;
+}
+
+#avatar .app .share h3 {
+  font-size: 100px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#avatar .app .share a {
+  background-color: #ed237a;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 2px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: 0.3s linear all;
+  margin: 10px 10px;
+  cursor: pointer;
+}
+
+#avatar .app .share a:hover {
+  background-color: #fff;
+  color: #ed237a;
+}
+
+#avatar .app .share a i {
+  margin-left: 10px;
+}
+
+
+/*************************
+
+Tour
+
+*************************/
+
+#tour .infos {
+  margin: 10px inherit;
+}
+
+#tour .infos h1,
+#tour .dates h3 {
+  font-size: 120px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#tour .infos p {
+  font-size: 22px;
+  font-family: 'Dosis', 'Arial', sans-serif;
+}
+
+#tour .infos img {
+  width: 100%;
+  margin: 10px 0;
+}
+
+#tour .dates {
+  text-align: center;
+}
+
+#tour .dates .nextDate {
+  display: block;
+  font-size: 22px;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  text-align: center;
+  padding: 0 10px;
+  background: rgba(193, 211, 0, 0.5);
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  color: #000;
+  border-radius: 5px;
+}
+
+#tour .dates .nextDate:hover {
+  background: rgba(193, 211, 0, 1);
+}
+
+#tour .dates .nextDate:hover h4 {
+  color: #fff;
+  transform: scale(1.2);
+}
+
+#tour .dates .nextDate h4 {
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  text-align: center;
+  padding: 0 10px;
+  margin: 0;
+  transition: color 0.5s, transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+#tour .dates .nextDate p {
+  margin: 0;
+}
+
+#tour .dates #more {
+  background-color: #e0e980;
+  font-family: 'Dosis', 'Arial', sans-serif;
+  color: #000;
+  font-weight: 700;
+  font-size: 22px;
+  padding: 7px 24px;
+  display: inline-block;
+  border-radius: 5px;
+  text-transform: uppercase;
+  -webkit-transition: 0.3s linear all;
+  transition: 0.3s linear all;
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+#tour .dates #more:hover {
+  background-color: #c1d300;
+  color: #fff;
+}
+
+#tour .dates #table {
+  display: none;
+}
+
+#tour .dates #table th:first-of-type {
+  width: 15%;
+}
+
+@media screen and (max-width: 1199px) {
+  #tour .dates .nextDate {
+    margin: 10px 0;
+  }
+}
+
+
+/*************************
+
+Produits
+
+**************************/
+
+#cultureCoco {
+  background-color: #001623;
+  background-image: url(../images/palmier-bg.png);
+  background-repeat: no-repeat;
+  background-size: initial;
+  background-position: center top;
+  padding: 20px 0;
+  color: #fff;
+}
+
+#cultureCoco .infos {
+  margin: 10px auto;
+}
+
+#cultureCoco .infos h1 {
+  font-size: 150px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#cultureCoco .infos p {
+  font-size: 22px;
+}
+
+#produits {
+  padding: 20px 0;
+}
+
+#produits .infos {
+  margin: 10px auto;
+}
+
+#produits .infos .imgProduit{
+  text-align: center;
+}
+
+#produits .infos h1 {
+  font-size: 120px;
+  font-family: 'vaivai', 'Arial', sans-serif;
+  line-height: 0.4;
+  text-align: center;
+  margin: 0;
+  padding: 30px 0;
+}
+
+#produits .infos p {
+  font-size: 22px;
+}
+
 
 /*************************
 
