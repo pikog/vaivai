@@ -216,15 +216,6 @@ cocoSlider
   margin-bottom: 0px;
 }
 
-.slick-dots li.slick-active button:before,
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before,
-.slick-prev:hover:before,
-.slick-next:hover:before {
-  color: #ed237a;
-  opacity: 1;
-}
-
 .slick-prev:before,
 .slick-next:before {
   opacity: 0.50;
@@ -235,6 +226,15 @@ cocoSlider
 .slick-prev:focus:before,
 .slick-next:focus:before {
   opacity: 0.50;
+}
+
+.slick-dots li.slick-active button:before,
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before,
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #ed237a;
+  opacity: 1;
 }
 
 #feature .cocoSlider-item {
@@ -429,6 +429,12 @@ Tour
   width: 70px;
   position: relative;
   top: -5px;
+}
+
+#tour .concept img.logoCoconut {
+  width: 120px;
+  position: relative;
+  top: -2px;
 }
 
 #tour .dates {
