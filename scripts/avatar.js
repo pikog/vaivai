@@ -27,8 +27,10 @@ $(document).ready(function () {
   function splitText(text) {
     return text.match(/.{1,40}/g)
   }
-
-  goAvatar();
+  
+  $('img#fondCanvas').ready(function () {
+      goAvatar();
+  });
 
   $('input[type=radio]').change(function () {
     goAvatar();
