@@ -21,7 +21,7 @@ $(document).ready(function () {
       }
     });
 
-    //$('a#linkImgCanvas').attr("href", $('#canvasAvatar')[0].toDataURL());
+    $('a#linkImgCanvas').attr("href", $('#canvasAvatar')[0].toDataURL());
   }
 
   function splitText(text) {
