@@ -425,6 +425,12 @@ Tour
   width: 100%;
 }
 
+#tour .concept img.logoVaivai {
+  width: 70px;
+  position: relative;
+  top: -5px;
+}
+
 #tour .dates {
   text-align: center;
 }
