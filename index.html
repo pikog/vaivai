@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="styles/slick-theme.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dosis">
   <link rel="stylesheet" href="styles/font-awesome.min.css">
+  <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.css" />
   <link rel="stylesheet" href="styles/style.css" />
 </head>
 
@@ -51,7 +52,7 @@
           <div class="infos">
             <h3>CocoNut Tour !</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
-            <a href="#tour" title="Voir le Tour">En route !</a>
+            <a href="#tour" title="Voir le Tour" class="cocoButton">En route !</a>
           </div>
 
         </div>
@@ -61,13 +62,13 @@
           <div class="infos">
             <h3>Partagez votre passion coco !</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, vitae!</p>
-            <a href="pages/partage.html" title="Partagez votre passion coco">C'est parti !</a>
+            <a href="pages/partage.html" title="Partagez votre passion coco" class="cocoButton">C'est parti !</a>
           </div>
 
           <img src="images/slider-home/slide-2.png" alt="Partage" title="Partage">
 
         </div>
-        
+
         <div class="cocoSlider-item">
 
           <img src="images/slider-home/slide-3.png" alt="Produits" title="Produits">
@@ -75,7 +76,7 @@
           <div class="infos">
             <h3>Des produits 100% Coco !</h3>
             <p>Redécouvrez la fraicheur de la noix de coco avec des produits 100% coco</p>
-            <a href="pages/produits.html" title="Découvrir la fraicheur">Découvir la fraicheur coco !</a>
+            <a href="pages/produits.html" title="Découvrir la fraicheur" class="cocoButton">Découvir la fraicheur coco !</a>
           </div>
 
         </div>
@@ -90,22 +91,26 @@
 
     <section id="tour" name="tour">
 
-      <div class="row infos">
+      <div class="row concept">
 
         <div class="small-12 medium-6 large-8 columns">
-          <h1>Le Concept</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, quod ratione ut suscipit. Vero sit labore quia eaque est in, similique quam explicabo, dignissimos provident, deserunt quo voluptatibus recusandae ipsum.</p>
+          <h2>Le Concept</h2>
+          <p>Bienvenue sur le site du coconut tour !<br/>Que vous soyez un habitué de Vaïvaï ou un nouveau coco addict, vous trouverez ici toutes les informations relatives au coconut tour ainsi qu’une brève introduction aux produits exotiques que nous proposons sur place. Un guide vital, en soi !</p>
         </div>
 
         <div class="small-12 medium-6 large-4 columns">
           <img src="images/van.png" alt="Van" title="Van" />
         </div>
 
+        <div class="small-12 columns">
+          <p>Mais le coconut tour, si vous êtes perdu, qu’est-ce que c’est ? Eh bien c’est un tour, comme son nom l’indique, en van, qui se déroule de mi-mai à mi-juillet dans Paris. Il a pour but de faire découvrir les délicieux produits que nous offre la noix de coco ; cheval de guerre de notre marque. En effet, malgré son immense popularité dans d’autres pays tels que le Brésil, la noix de coco n’est pas très connue en France et y goûter vous fera bien regretter ce manque! Nous avons donc décidé d’y remédier, en tant que coco addicts, et proposons lors de nos multiples arrêts dans la capitale surprises et dégustations en masse. Alors n’hésitez plus, jetez un oeil à la programmation et rejoignez-nous vite !</p>
+        </div>
+
       </div>
 
       <div class="row dates">
 
-        <h3>Nos dates</h3>
+        <h2>Les prochaines dates</h2>
 
         <div class="small-12 medium-4 columns">
           <a href="#" target="_blank" class="nextDate">
@@ -131,115 +136,14 @@
           </a>
         </div>
 
-        <button id="more">En voir +</button>
+      </div>
 
-        <div class="small-12 columns" id="table">
-          <table>
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Lieu</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>24 mai</td>
-                <td><a href="#" title="Adidas Runners - Pigale" target="_blank">Adidas Runners - Pigale</a></td>
-              </tr>
-              <tr>
-                <td>29 mai</td>
-                <td><a href="#" title="Gym Suédoise - Buttes Chaumont" target="_blank">Gym Suédoise - Buttes Chaumont</a></td>
-              </tr>
-              <tr>
-                <td>30 mai</td>
-                <td><a href="#" title="Gym Suédoise - Jardin du luxembourg" target="_blank">Gym Suédoise - Jardin du luxembourg</a></td>
-              </tr>
-              <tr>
-                <td>31 mai</td>
-                <td><a href="#" title="Adidas Runners - Sentier" target="_blank">Adidas Runners - Sentier</a></td>
-              </tr>
-              <tr>
-                <td>5 juin</td>
-                <td><a href="#" title="Gym Suédoise - Parc monceau" target="_blank">Gym Suédoise - Parc monceau</a></td>
-              </tr>
-              <tr>
-                <td>6 juin</td>
-                <td><a href="#" title="Gym Suédoise - Jardin du luxembourg" target="_blank">Gym Suédoise - Jardin du luxembourg</a></td>
-              </tr>
-              <tr>
-                <td>7 juin</td>
-                <td><a href="#" title="Adidas Runners - Champs-Elysées" target="_blank">Adidas Runners - Champs-Elysées</a></td>
-              </tr>
-              <tr>
-                <td>10 juin</td>
-                <td><a href="#" title="We love green - Vincennes" target="_blank">We love green - Vincennes</a></td>
-              </tr>
-              <tr>
-                <td>11 juin</td>
-                <td><a href="#" title="We love green - Vincennes" target="_blank">We love green - Vincennes</a></td>
-              </tr>
-              <tr>
-                <td>12 juin</td>
-                <td><a href="#" title="Gym Suédoise - Buttes Chaumont" target="_blank">Gym Suédoise - Buttes Chaumont</a></td>
-              </tr>
-              <tr>
-                <td>14 juin</td>
-                <td><a href="#" title="Adidas Runners - Bastille" target="_blank">Adidas Runners - Bastille</a></td>
-              </tr>
-              <tr>
-                <td>19 juin</td>
-                <td><a href="#" title="Gym Suédoise - Parc monceau" target="_blank">Gym Suédoise - Parc monceau</a></td>
-              </tr>
-              <tr>
-                <td>20 juin</td>
-                <td><a href="#" title="Gym Suédoise - Parc monceau" target="_blank">Gym Suédoise - Jardin du luxembourg</a></td>
-              </tr>
-              <tr>
-                <td>21 juin</td>
-                <td><a href="#" title="Adidas Runners - Belleville" target="_blank">Adidas Runners - Belleville</a></td>
-              </tr>
-              <tr>
-                <td>24 juin</td>
-                <td><a href="#" title="Adidas Runners - Belleville" target="_blank">Adidas Runners - Belleville</a></td>
-              </tr>
-              <tr>
-                <td>26 juin</td>
-                <td><a href="#" title="Gym Suédoise - Buttes Chaumont" target="_blank">Gym Suédoise - Buttes Chaumont</a></td>
-              </tr>
-              <tr>
-                <td>28 juin</td>
-                <td><a href="#" title="Adidas Runners - Odeon" target="_blank">Adidas Runners - Odeon</a></td>
-              </tr>
-              <tr>
-                <td>3 juillet</td>
-                <td><a href="#" title="Gym Suédoise - Parc monceau" target="_blank">Gym Suédoise - Parc monceau</a></td>
-              </tr>
-              <tr>
-                <td>5 juillet</td>
-                <td><a href="#" title="Adidas Runners - République" target="_blank">Adidas Runners - République</a></td>
-              </tr>
-              <tr>
-                <td>6 juillet</td>
-                <td><a href="#" title="FNAC LIVE Festival - Hôtel de ville de Paris" target="_blank">FNAC LIVE Festival - Hôtel de ville de Paris</a></td>
-              </tr>
-              <tr>
-                <td>7 juillet</td>
-                <td><a href="#" title="FNAC LIVE Festival - Hôtel de ville de Paris" target="_blank">FNAC LIVE Festival - Hôtel de ville de Paris</a></td>
-              </tr>
-              <tr>
-                <td>8 juillet</td>
-                <td><a href="#" title="FNAC LIVE Festival - Hôtel de ville de Paris" target="_blank">FNAC LIVE Festival - Hôtel de ville de Paris</a></td>
-              </tr>
-              <tr>
-                <td>10 juillet</td>
-                <td><a href="#" title="Gym Suédoise - Buttes Chaumont" target="_blank">Gym Suédoise - Buttes Chaumont</a></td>
-              </tr>
-              <tr>
-                <td>12 juillet</td>
-                <td><a href="#" title="Adidas Runners - Jaures" target="_blank">Adidas Runners - Jaures</a></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="row cartes">
+       
+        <h2>Le tour</h2>
+        
+        <div class="small-12 columns">
+          <div id="map"></div>
         </div>
 
       </div>
@@ -283,6 +187,7 @@
   <script src="scripts/vendor/what-input.js"></script>
   <script src="scripts/vendor/foundation.min.js"></script>
   <script src="scripts/vendor/slick.min.js"></script>
+  <script src="https://api.mapbox.com/mapbox-gl-js/v0.32.1/mapbox-gl.js"></script>
   <script src="scripts/main.js"></script>
   <script>
     $(document).ready(function() {
@@ -306,13 +211,30 @@
         }]
       });
 
-      $("button#more").click(function() {
-        $("#table").toggle();
-        if ($("#table").is(":visible")) {
-          $(this).text("En voir -");
-        } else {
-          $(this).text("En voir +");
+      mapboxgl.accessToken = 'pk.eyJ1IjoiZW5hbHp5ciIsImEiOiJjaXluMGd0aXQwMDByM3VwaXo2NzZqOXFuIn0.QBMr4ampEv3CxYIBwzKQ3A';
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/enalzyr/ciyn76se100b82slacjqsl8ip'
+      });
+
+      map.on('click', function(e) {
+        var features = map.queryRenderedFeatures(e.point, {
+          layers: ['coconut-tour'] // replace this with the name of the layer
+        });
+
+        if (!features.length) {
+          return;
         }
+
+        var feature = features[0];
+
+        var popup = new mapboxgl.Popup({
+            offset: [0, -15]
+          })
+          .setLngLat(feature.geometry.coordinates)
+          .setHTML('<h4>' + feature.properties.Date + '</h4><a href="' + feature.properties.Lien + '" title="' + feature.properties.Enseigne + '">' + feature.properties.Enseigne + '</a><p>' + feature.properties.Lieu + '</p>')
+          .setLngLat(feature.geometry.coordinates)
+          .addTo(map);
       });
 
     });
