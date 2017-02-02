@@ -58,7 +58,7 @@ a {
   text-decoration: none;
 }
 
-a.cocoButton, button {
+a.cocoButton, button.cocoButton {
   background-color: #ed237a;
   font-family: 'Dosis', 'Arial', sans-serif;
   color: #fff;
@@ -71,7 +71,7 @@ a.cocoButton, button {
   margin: 10px;
 }
 
-button {
+button.cocoButton {
   padding: 7px 24px;
   cursor: pointer;
 }
@@ -381,15 +381,6 @@ Tour
 
 #tour {
   padding: 20px 0;
-}
-
-#tour h2 {
-  font-size: 120px;
-  font-family: 'vaivai', 'Arial', sans-serif;
-  line-height: 0.8;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
 }
 
 #tour .concept img {
