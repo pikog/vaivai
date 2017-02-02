@@ -206,7 +206,7 @@ cocoSlider
   z-index: 11;
 }
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1275px) {
   #feature .cocoSlider .slick-next {
     right: 25px;
   }
