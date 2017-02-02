@@ -35,6 +35,7 @@ $(document).ready(function () {
   });
 
   $('#update').click(function (e) {
+    e.preventDefault();
     goAvatar();
   });
 
