@@ -5,6 +5,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <meta name="theme-color" content="#ed237a" />
   <title>Coconut Tour - Accueil</title>
   <link rel="stylesheet" href="styles/foundation.min.css" />
   <link rel="stylesheet" href="styles/slick.css" />
@@ -113,7 +114,8 @@
         <h2>Les prochaines dates</h2>
 
         <div class="small-12 medium-4 columns">
-          <a href="#" target="_blank" class="nextDate">
+          <a href="#map" class="nextDate" data-lng="2.338124" data-lat="
+48.882278">
             <h4>17 Mai</h4>
             <p>Adidas Runners</p>
             <p>Pigale</p>
@@ -121,7 +123,8 @@
         </div>
 
         <div class="small-12 medium-4 columns">
-          <a href="#" target="_blank" class="nextDate">
+          <a href="#map" class="nextDate" data-lng="2.309087" data-lat="
+48.880252">
             <h4>22 Mai</h4>
             <p>Gym Suédoise</p>
             <p>Parc monceau</p>
@@ -129,7 +132,8 @@
         </div>
 
         <div class="small-12 medium-4 columns">
-          <a href="#" target="_blank" class="nextDate">
+          <a href="#map" class="nextDate" data-lng="2.336383" data-lat="
+48.846703">
             <h4>23 Mai</h4>
             <p>Gym Suédoise</p>
             <p>Jardin du luxembourg</p>
@@ -138,7 +142,7 @@
 
       </div>
 
-      <div class="row cartes">
+      <div class="row cartes" name="map">
        
         <h2>Le tour</h2>
         
@@ -215,17 +219,18 @@
       mapboxgl.accessToken = 'pk.eyJ1IjoiZW5hbHp5ciIsImEiOiJjaXluMGd0aXQwMDByM3VwaXo2NzZqOXFuIn0.QBMr4ampEv3CxYIBwzKQ3A';
       var map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/enalzyr/ciyn76se100b82slacjqsl8ip'
+        style: 'mapbox://styles/enalzyr/ciyn76se100b82slacjqsl8ip',
+        center: [2.374, 48.858],
+        zoom: 11.7,
+        pitch: 60
       });
-
+      
+      map.addControl(new mapboxgl.NavigationControl());
+      
       map.on('click', function(e) {
         var features = map.queryRenderedFeatures(e.point, {
-          layers: ['coconut-tour'] // replace this with the name of the layer
+          layers: ['coconut-tour']
         });
-
-        if (!features.length) {
-          return;
-        }
 
         var feature = features[0];
 
@@ -233,9 +238,15 @@
             offset: [0, -15]
           })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML('<h4>' + feature.properties.Date + '</h4><a href="' + feature.properties.Lien + '" title="' + feature.properties.Enseigne + '">' + feature.properties.Enseigne + '</a><p>' + feature.properties.Lieu + '</p>')
+          .setHTML('<h5>' + feature.properties.Date + '</h5><a href="' + feature.properties.Lien + '" title="' + feature.properties.Enseigne + '">' + feature.properties.Enseigne + '</a><p>' + feature.properties.Lieu + '</p>')
           .setLngLat(feature.geometry.coordinates)
           .addTo(map);
+      });
+      
+      $("a[href='#map']").click(function(e) {
+        var lat = parseFloat($(this).data("lat"));
+        var lng = parseFloat($(this).data("lng"));
+        map.flyTo({center: [lng, lat], zoom: 15});
       });
 
     });
