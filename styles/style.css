@@ -57,6 +57,9 @@ h4 {
 }
 
 @media screen and (max-width: 639px) {
+  body {
+    font-size: 18px;
+  }
   h1,
   h2,
   h3 {
@@ -65,6 +68,15 @@ h4 {
   h4 {
     font-size: 40px;
   }
+}
+
+a {
+  color: #000;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: #ed237a;
 }
 
 a.cocoButton,
@@ -92,6 +104,15 @@ button.cocoButton:hover {
   color: #ed237a;
 }
 
+.separator {
+  height: 20px;
+  background-image: url(../images/seperator.png);
+  background-repeat: repeat-x;
+}
+
+div.clear {
+  clear: both;
+}
 
 /***********************
 
@@ -461,7 +482,7 @@ Tour
 
 /*************************
 
-Produits
+Culture Coco
 
 **************************/
 
@@ -471,26 +492,23 @@ Produits
   background-repeat: no-repeat;
   background-size: initial;
   background-position: center top;
-  padding: 20px 0;
+  padding: 30px 0;
   color: #fff;
 }
 
-#cultureCoco .infos {
-  margin: 10px auto;
+#cultureCoco h1 {
+  font-size: 160px;
 }
 
-#cultureCoco .infos h1 {
-  font-size: 150px;
-  font-family: 'vaivai', 'Arial', sans-serif;
-  line-height: 0.4;
-  text-align: center;
-  margin: 0;
-  padding: 30px 0;
+#cultureCoco p {
+  margin-bottom: 32px;
 }
 
-#cultureCoco .infos p {
-  font-size: 22px;
-}
+/*************************
+
+Produit
+
+**************************/
 
 #produits {
   padding: 20px 0;
@@ -504,76 +522,26 @@ Produits
   width: 100%;
 }
 
-#produits .infos h1 {
-  font-size: 120px;
-  font-family: 'vaivai', 'Arial', sans-serif;
-  line-height: 0.4;
-  text-align: center;
-  margin: 0;
-  padding: 30px 0;
-}
-
-#produits .infos p {
-  font-size: 22px;
-}
-
 #produits .moreProducts {
   text-align: center;
+  padding-bottom: 20px;
 }
 
 #produits .moreProducts a {
   background-color: #ed237a;
-  font-family: 'Dosis', 'Arial', sans-serif;
   color: #fff;
-  font-weight: 700;
-  font-size: 22px;
-  padding: 2px 24px;
-  display: inline-block;
-  border-radius: 5px;
-  text-transform: uppercase;
   transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  margin: 10px 10px;
-  cursor: pointer;
 }
 
 #produits .moreProducts a:hover {
   transform: scale(1.1);
 }
 
-
-/*************************
-
-Separator
-
-*************************/
-
-.separator {
-  height: 20px;
-  background-image: url(../images/seperator.png);
-  background-repeat: repeat-x;
-}
-
-
-/*************************
-  
-ClearBoth
-  
-*************************/
-
-div.clear {
-  clear: both;
-}
-
-
 /************************
 
 Footer
 
 ************************/
-
-#footer {
-  font-family: 'Dosis', Arial, sans-serif;
-}
 
 #footer #socialLinks li a {
   color: #000;
@@ -587,13 +555,7 @@ Footer
 }
 
 #footer #corporationLinks li a {
-  color: #000;
-  transition: color 0.5s;
   font-size: 16px;
-}
-
-#footer #corporationLinks li a:hover {
-  color: #ed237a;
 }
 
 @media screen and (max-width: 639px) {
