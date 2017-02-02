@@ -46,7 +46,8 @@ h3 {
   padding: 10px 0;
 }
 
-h4, h5 {
+h4,
+h5 {
   font-size: 50px;
   font-weight: bold;
   text-transform: uppercase;
@@ -497,6 +498,7 @@ Tour
   }
 }
 
+
 /*********************
 
 Map
@@ -586,6 +588,21 @@ Produit
 
 #produits .infos img {
   width: 100%;
+}
+
+@media screen and (max-width: 639px) {
+  #produits .infos:first-child {
+    display: flex;
+    flex-flow: column;
+  }
+  #produits .infos:first-child div:first-child {
+    order: 2;
+  }
+  
+  ##produits .infos:first-child div:last-child {
+    order: 1;
+  }
+  
 }
 
 #produits .moreProducts {
