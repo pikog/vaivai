@@ -599,7 +599,7 @@ Produit
     order: 2;
   }
   
-  ##produits .infos:first-child div:last-child {
+  #produits .infos:first-child div:last-child {
     order: 1;
   }
   
