@@ -426,6 +426,9 @@ Tour
 
 #tour {
   padding: 20px 0;
+  background-image: url(../images/palmier-1.png), url(../images/palmier-2.png);
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
 }
 
 #tour .concept img {
