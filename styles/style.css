@@ -87,7 +87,7 @@ button.cocoButton {
 }
 
 a.cocoButton:hover,
-button:hover {
+button.cocoButton:hover {
   background-color: #fff;
   color: #ed237a;
 }
