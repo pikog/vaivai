@@ -79,6 +79,10 @@ a:hover {
   color: #ed237a;
 }
 
+b {
+  color: #ed237a;
+}
+
 a.cocoButton,
 button.cocoButton {
   background-color: #ed237a;
@@ -113,6 +117,7 @@ button.cocoButton:hover {
 div.clear {
   clear: both;
 }
+
 
 /***********************
 
@@ -504,6 +509,7 @@ Culture Coco
   margin-bottom: 32px;
 }
 
+
 /*************************
 
 Produit
@@ -512,6 +518,9 @@ Produit
 
 #produits {
   padding: 20px 0;
+  background-image: url(../images/palmier-1.png), url(../images/palmier-2.png);
+  background-position: left top, right top;
+  background-repeat: no-repeat, no-repeat;
 }
 
 #produits .infos {
@@ -536,6 +545,7 @@ Produit
 #produits .moreProducts a:hover {
   transform: scale(1.1);
 }
+
 
 /************************
 
