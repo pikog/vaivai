@@ -17,9 +17,9 @@
 </head>
 
 <body>
-
+  <!-- Header -->
   <header id="header">
-
+    <!-- Hamburger menu -->
     <div class="title-bar" data-responsive-toggle="menuHeader" data-hide-for="medium">
       <button class="menu-icon" type="button" data-toggle="menuHeader"></button>
       <div id="titleBarLogo">
@@ -31,6 +31,7 @@
       <div id="menuLogo">
         <a href="index.html" title="Accueil"><img src="images/logo.png" alt="Vaivai" title="Vaivai"></a>
       </div>
+      <!-- Links menu -->
       <ul class="menu">
         <li><a href="index.html" title="Accueil">Accueil</a></li>
         <li><a href="pages/partage.html" title="Partagez">Partagez !</a></li>
@@ -43,7 +44,7 @@
   <main>
 
     <section id="feature">
-
+      <!-- Slick slider -->
       <div class="cocoSlider">
 
         <div class="cocoSlider-item">
@@ -90,10 +91,11 @@
 
     <div class="separator"></div>
 
+    <!-- Tour section -->
     <section id="tour" name="tour">
 
       <div class="row concept">
-
+        <!-- Text coconut tour -->
         <div class="small-12 medium-6 large-8 columns">
           <h2>Le Concept</h2>
           <p>Bienvenue sur le site du <img src="images/coconut-logo.png" alt="Vaïvaï" title="Vaïvaï" class="logoCoconut"> !<br/>Que vous soyez un habitué de <img src="images/vaivai-logo.png" alt="Vaïvaï" title="Vaïvaï" class="logoVaivai"> ou un nouveau <b>coco addict</b>, vous trouverez ici toutes les informations relatives au <img src="images/coconut-logo.png" alt="Vaïvaï" title="Vaïvaï" class="logoCoconut"> ainsi qu’une brève introduction aux produits exotiques que nous proposons sur place. Un guide vital, en soi !</p>
@@ -108,7 +110,7 @@
         </div>
 
       </div>
-
+      <!-- Next dates -->
       <div class="row dates">
 
         <h2>Les prochaines dates</h2>
@@ -143,10 +145,11 @@
       </div>
 
       <div class="row cartes" name="map">
-       
+
         <h2>Le tour</h2>
-        
+
         <div class="small-12 columns">
+          <!-- MapBox container -->
           <div id="map"></div>
         </div>
 
@@ -155,13 +158,13 @@
     </section>
 
   </main>
-
+  <!-- Footer -->
   <footer id="footer">
 
     <div class="separator"></div>
 
     <div class="menu-centered" id="socialLinks">
-
+      <!-- Social links -->
       <ul class="menu">
         <li><a href="https://twitter.com/vaivaiconnexion" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
         <li><a href="https://www.facebook.com/vaivaifrance/" title="Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -172,7 +175,7 @@
       </ul>
 
     </div>
-
+    <!-- More Links -->
     <div class="menu-centered" id="corporationLinks">
 
       <ul class="vertical medium-horizontal menu">
@@ -195,6 +198,7 @@
   <script src="scripts/main.js"></script>
   <script>
     $(document).ready(function() {
+      //Init Slick Slider
       $('.cocoSlider').slick({
         dots: true,
         infinite: true,
@@ -215,7 +219,7 @@
           },
         }]
       });
-
+      //Init MapBox
       mapboxgl.accessToken = 'pk.eyJ1IjoiZW5hbHp5ciIsImEiOiJjaXluMGd0aXQwMDByM3VwaXo2NzZqOXFuIn0.QBMr4ampEv3CxYIBwzKQ3A';
       var map = new mapboxgl.Map({
         container: 'map',
@@ -224,16 +228,17 @@
         zoom: 11.7,
         pitch: 60
       });
-      
+
       map.addControl(new mapboxgl.NavigationControl());
-      
+
+      //Open popup when click on pinpoint
       map.on('click', function(e) {
         var features = map.queryRenderedFeatures(e.point, {
           layers: ['coconut-tour']
         });
 
         var feature = features[0];
-
+        //Set popup content
         var popup = new mapboxgl.Popup({
             offset: [0, -15]
           })
@@ -242,11 +247,15 @@
           .setLngLat(feature.geometry.coordinates)
           .addTo(map);
       });
-      
+
+      //Zoom on pinpoint when click on next dates
       $("a[href='#map']").click(function(e) {
         var lat = parseFloat($(this).data("lat"));
         var lng = parseFloat($(this).data("lng"));
-        map.flyTo({center: [lng, lat], zoom: 15});
+        map.flyTo({
+          center: [lng, lat],
+          zoom: 15
+        });
       });
 
     });
